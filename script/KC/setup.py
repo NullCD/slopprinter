@@ -295,7 +295,7 @@ def webui_req(U, W, M):
     for item in line: download(item)
 
     if U not in ['SwarmUI', 'ComfyUI']:
-        e = 'jpg' if U in ['Forge-Classic', 'Forge-Neo'] else 'png'
+        e = 'png' if U in ['Forge-Classic', 'Forge-Neo'] else 'png'
         SyS(f'rm -f {W}/html/card-no-preview.{e}')
 
         for ass in [
