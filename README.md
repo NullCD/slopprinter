@@ -5,24 +5,22 @@ This fork is for adding additional fixes (PR works, but probably will take a whi
 Colab only, for now.
 
 ## Available frontends:
-Colab/Kaggle
+**PRIORITIZED/FIXED**
+- Forge Classic 
+
+**UNTESTED**
 - A1111
 - Forge
 - ReForge
-- Forge Classic (**PRIORITIZED/FIXED**)
 - Forge Neo
 - ComfyUI
 - SwarmUI
-
-Colab/Kaggle/Sagemaker
 - Forge Neo
-
-SageMaker ONLY:
 - SDTrainer (SageMaker Studio Lab)
 - FaceFusion (SageMaker Studio Lab)
 
 ## Fixes:
-- Added `model-keyword` extension.
-- Fixed Forge-Classic repository when cloning repository.
+- Added `model-keyword` extension for tagger to work.
+- Fixed Forge-Classic repository clone function when installing.
 - Added custom extensions/themes that might be suitable for this fork.
 <br>
