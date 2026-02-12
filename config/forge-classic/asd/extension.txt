@@ -1,4 +1,4 @@
-https://github.com/Bing-su/adetailer 4-adetailer
+https://github.com/Bing-su/adetailer
 https://github.com/DominikDoom/a1111-sd-webui-tagcomplete
 https://github.com/Coyote-A/ultimate-upscale-for-automatic1111
 https://github.com/gutris1/sd-hub
@@ -6,7 +6,6 @@ https://github.com/gutris1/sd-image-info
 https://github.com/gutris1/sd-image-viewer
 https://github.com/gutris1/sd-image-scripts
 https://github.com/gutris1/sd-webui-misc
-https://github.com/gutris1/timer_timer
 https://github.com/anxety-solo/sd-aspect-ratio-plus
 https://github.com/anxety-solo/sd-civitai-extension
 https://github.com/Haoming02/sd-forge-chunk-weights
@@ -17,3 +16,6 @@ https://github.com/Haoming02/sd-forge-couple
 https://github.com/mix1009/model-keyword
 https://github.com/Haoming02/sd-webui-prompt-format
 https://github.com/anxety-solo/anxety-theme
+https://github.com/Tsukreya/Umi-AI-Wildcards
+https://github.com/ilian6806/stable-diffusion-webui-state
+https://github.com/NullCD/segs-misc
