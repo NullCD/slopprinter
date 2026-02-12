@@ -1,5 +1,6 @@
 # Stable Diffusion WebUI - Fixed
 [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NullCD/segsmaker-custom/blob/main/notebook/Segsmaker_COLAB.ipynb)
+[![Open in Kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://www.kaggle.com/code/nullaix/segsmaker-fork)
 
 This fork is for adding additional fixes (PR works, but probably will take a while to be integrated).
 Colab only, for now.
