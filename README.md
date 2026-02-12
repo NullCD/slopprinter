@@ -15,4 +15,4 @@ Available Models:
 - FaceFusion (SageMaker Studio Lab)
 <br>
 
-| Colab | [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NullCD/segsmaker/blob/main/notebook/Segsmaker_COLAB.ipynb) |
+[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NullCD/segsmaker/blob/main/notebook/Segsmaker_COLAB.ipynb)
