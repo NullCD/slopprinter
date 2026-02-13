@@ -24,9 +24,8 @@ CD = os.chdir
 
 def purgeVAR():
     l = [
-        'WebUI', 'Models', 'WebUI_Output', 'Extensions', 'Embeddings', 'UNET', 'CLIP', 'VAE',
-        'CKPT', 'LORA', 'TMP_CKPT', 'TMP_LORA', 'Forge_SVD', 'Controlnet_Widget', 'Upscalers',
-        'ADetailer'
+        'WebUI', 'Models', 'WebUI_Output', 'Extensions', 'Embeddings', 'UNET', 'VAE',
+        'CKPT', 'LORA', 'TMP_CKPT', 'TMP_LORA', 'Forge_SVD', 'Adetailer', 'Upscalers'
     ]
     for v in l:
         if v in globals(): del globals()[v]
@@ -43,22 +42,18 @@ def setWebUIVAR(ui):
 
     ext, embed, vae, ckpt, lora, upscaler = maps.get(ui, (None,) * 6)
 
-    # Note: 'models' and 'output' are preserved as variables from your original snippet.
-    # If they are strings, ensure they are quoted (e.g., 'models') in your environment if not defined globally.
     WebUI = HOME / ui
     Models = WebUI / models 
     WebUI_Output = WebUI / output
-    
-    # Logic simplified for Forge-Classic
     Extensions = WebUI / ext if ext else None
     Embeddings = Models / embed if embed else None
     VAE = Models / vae if vae else None
     CKPT = Models / ckpt if ckpt else None
     LORA = Models / lora if lora else None
     Upscalers = Models / upscaler if upscaler else None
-    ADetailer = Models / adetailer if adetailer else None
+    Adetailer = Models / adetailer if adetailer else None
 
-    return WebUI, Models, WebUI_Output, Extensions, Embeddings, VAE, CKPT, LORA, Upscalers, ADetailer
+    return WebUI, Models, WebUI_Output, Extensions, Embeddings, VAE, CKPT, LORA, Upscalers, Adetailer
 
 if SM:
     @register_line_magic
@@ -84,12 +79,7 @@ if marked.exists():
     purgeVAR()
 
     ui = getWebUIName(marked)
-    # Unpack including ADetailer
-    WebUI, Models, WebUI_Output, Extensions, Embeddings, VAE, CKPT, LORA, Upscalers, ADetailer = setWebUIVAR(ui)
-    
-    # Removed CLIP logic as it relied on Forge/ComfyUI/SwarmUI list. 
-    # If Forge-Classic needs CLIP defined specifically here, restore it.
-    CLIP = None 
+    WebUI, Models, WebUI_Output, Extensions, Embeddings, VAE, CKPT, LORA, Upscalers, Adetailer = setWebUIVAR(ui)
     
     TMP_CKPT = TMP / 'ckpt'
     TMP_LORA = TMP / 'lora'
