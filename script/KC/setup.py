@@ -32,9 +32,9 @@ def getENV():
 
 def getArgs():
     parser = argparse.ArgumentParser(description='WebUI Installer Script for Kaggle and Google Colab')
-    parser.add_argument('--webui', required=True, help='available webui: Forge-Classic')
-    parser.add_argument('--civitai_key', required=True, help='your CivitAI API key')
-    parser.add_argument('--hf_read_token', default=None, help='your Huggingface READ Token (optional)')
+    parser.add_argument('--webui', required=True, help='Available WebUI: Forge-Classic')
+    parser.add_argument('--civitai_key', required=True, help='CivitAI API key (Required)')
+    parser.add_argument('--hf_read_token', default=None, help='Huggingface READ Token (Optional)')
 
     args, unknown = parser.parse_known_args()
 
@@ -72,7 +72,7 @@ def getPython():
     fn = Path(url).name
 
     CD(Path(ENVBASE).parent)
-    print(f"\n{ARROW} installing Python Portable 3.11.13")
+    print(f"\n{ARROW} Installing Python Portable 3.11.13")
 
     SyS('sudo apt-get -qq -y install aria2 pv lz4 > /dev/null 2>&1')
 
@@ -119,7 +119,7 @@ def install_tunnel():
     bins = {
         'zrok': {
             'bin': USR / 'zrok',
-            'url': 'https://github.com/openziti/zrok/releases/download/v1.0.6/zrok_1.0.6_linux_amd64.tar.gz'
+            'url': 'https://github.com/openziti/zrok/releases/download/v1.1.11/zrok_1.1.11_linux_amd64.tar.gz'
         },
         'ngrok': {
             'bin': USR / 'ngrok',
@@ -195,15 +195,6 @@ def webui_installation(U, W):
     V = M / 'VAE'
 
     webui_req(U, W, M)
-
-    extras = [
-        f'https://huggingface.co/gutris1/webui/resolve/main/misc/embeddingsXL.zip {W}',
-        f'https://huggingface.co/madebyollin/sdxl-vae-fp16-fix/resolve/main/sdxl.vae.safetensors {V} sdxl_vae.safetensors'
-    ]
-
-    for i in extras: download(i)
-    SyS(f"unzip -qo {W / 'embeddingsXL.zip'} -d {E} && rm {W / 'embeddingsXL.zip'}")
-
     webui_extension(U, W, M)
 
 def webui_selection(ui):
