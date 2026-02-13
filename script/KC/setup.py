@@ -179,7 +179,7 @@ def webui_req(U, W, M):
 
     for ass in [
         f'https://huggingface.co/CoreFSX/misc/resolve/main/card-no-preview.png {W}/html card-no-preview.{e}',
-        f'https://github.com/gutris1/segsmaker/raw/main/config/user.css {W} user.css'
+        f'https://github.com/NullCD/slopprinter/raw/main/config/user.css {W} user.css'
     ]: download(ass)
 
     download(f'https://github.com/NullCD/slopprinter/raw/main/config/config.json {W} config.json')
