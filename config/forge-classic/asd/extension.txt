@@ -13,9 +13,9 @@ https://github.com/Haoming02/sd-forge-layerdiffusion
 https://github.com/Haoming02/sd-forge-negpip
 https://github.com/Haoming02/sd-forge-blockcache
 https://github.com/Haoming02/sd-forge-couple
-https://github.com/mix1009/model-keyword
 https://github.com/Haoming02/sd-webui-prompt-format
-https://github.com/anxety-solo/anxety-theme
+https://github.com/mix1009/model-keyword
 https://github.com/Tsukreya/Umi-AI-Wildcards
 https://github.com/ilian6806/stable-diffusion-webui-state
 https://github.com/NullCD/segs-misc
+https://github.com/NullCD/anxety-theme
