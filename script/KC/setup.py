@@ -177,11 +177,8 @@ def webui_req(U, W, M):
     e = 'jpg'
     SyS(f'rm -f {W}/html/card-no-preview.{e}')
 
-    for ass in [
-        f'https://huggingface.co/CoreFSX/misc/resolve/main/card-no-preview.png {W}/html card-no-preview.{e}',
-        f'https://github.com/NullCD/slopprinter/raw/main/config/user.css {W} user.css'
-    ]: download(ass)
-
+    download(f'https://github.com/NullCD/slopprinter/raw/main/config/user.css {W} user.css')
+    download(f'https://huggingface.co/CoreFSX/misc/resolve/main/card-no-preview.png {W}/html card-no-preview.{e}')
     download(f'https://github.com/NullCD/slopprinter/raw/main/config/config.json {W} config.json')
 
 def webui_extension(U, W, M):
