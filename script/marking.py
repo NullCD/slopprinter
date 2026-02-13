@@ -37,22 +37,14 @@ def setWebUIVAR(ui):
     default = ('extensions', 'embeddings', 'VAE', 'Stable-diffusion', 'Lora', 'ESRGAN')
 
     maps = {
-        'A1111': default,
-        'Forge': default,
-        'ReForge': default,
-        'Forge-Classic': default,
-        'Forge-Neo': default,
-        'ComfyUI': ('custom_nodes', 'embeddings', 'vae', 'checkpoints', 'loras', 'upscale_models'),
-        'SwarmUI': ('Extensions', 'Embeddings', 'VAE', 'Stable-Diffusion', 'Lora', 'upscale_models'),
-        'FaceFusion': (None,) * 6,
-        'SDTrainer': (None, None, 'VAE', 'sd-models', None, None)
+        'Forge-Classic': default
     }
 
     ext, embed, vae, ckpt, lora, upscaler = maps.get(ui, (None,) * 6)
 
     WebUI = HOME / ui
-    Models = WebUI / ('Models' if ui == 'SwarmUI' else 'models')
-    WebUI_Output = WebUI / ('Output' if ui == 'SwarmUI' else 'output' if ui in ['Forge-Classic', 'Forge-Neo', 'ComfyUI', 'SDTrainer'] else 'outputs')
+    Models = WebUI / models
+    WebUI_Output = WebUI / output
     Extensions = (WebUI / 'src' / ext if ui == 'SwarmUI' and ext else WebUI / ext if ext else None)
     Embeddings = (Models / embed if ui in ['Forge-Classic', 'Forge-Neo', 'ComfyUI', 'SwarmUI'] else WebUI / embed if embed else None)
     VAE = Models / vae if vae else None
@@ -85,10 +77,6 @@ if marked.exists():
 
     ui = getWebUIName(marked)
     WebUI, Models, WebUI_Output, Extensions, Embeddings, VAE, CKPT, LORA, Upscalers = setWebUIVAR(ui)
-
-    Controlnet_Widget = WebUI / 'asd/controlnet.py' if WebUI else None
-    Forge_SVD = TMP / 'svd' if ui in ['Forge', 'ReForge'] else None
-    UNET = TMP / 'unet' if ui in ['Forge', 'ComfyUI', 'SwarmUI'] else None
     CLIP = TMP / 'clip' if ui in ['Forge', 'ComfyUI', 'SwarmUI'] else None
     TMP_CKPT = TMP / 'ckpt'
     TMP_LORA = TMP / 'lora'
