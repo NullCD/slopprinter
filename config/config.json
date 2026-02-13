@@ -11,6 +11,8 @@
     "live_preview_refresh_period": 100.0,
     "live_preview_fast_interrupt": true,
     "grid_format": "png",
+    "tac_maxResults": 12.0,
+    "tac_showWikiLinks": true,
     "quicksettings_list": [
         "sd_model_checkpoint",
         "sd_vae",
