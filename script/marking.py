@@ -56,9 +56,7 @@ def setWebUIVAR(ui):
     CKPT = Models / ckpt if ckpt else None
     LORA = Models / lora if lora else None
     Upscalers = Models / upscaler if upscaler else None
-    
-    # Added ADetailer path
-    ADetailer = Models / 'adetailer'
+    ADetailer = Models / adetailer if adetailer else None
 
     return WebUI, Models, WebUI_Output, Extensions, Embeddings, VAE, CKPT, LORA, Upscalers, ADetailer
 
